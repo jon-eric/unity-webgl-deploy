@@ -11,6 +11,12 @@ jobs:
         with:
           lfs: true
 
+      - uses: actions/cache@v3.3.1
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+
       - name: Build project
         uses: game-ci/unity-builder@v2.1.2
         env:
