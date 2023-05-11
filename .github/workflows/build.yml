@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: Build
+    name: Build Unity Project
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.5.2
@@ -26,5 +26,5 @@ jobs:
 
       - uses: actions/upload-artifact@v3.1.2
         with:
-          name: Build
-          path: build
+          name: github-pages
+          path: build/WebGL/WebGL
